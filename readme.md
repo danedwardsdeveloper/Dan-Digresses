@@ -10,7 +10,8 @@
 
 ## To-Do List
 
-- [ ] Clone a hard-coded static version of the homepage
+- [x] Clone a hard-coded static version of the homepage
+- [ ] Make the homepage responsive
 - [ ] Clone a hard-coded static version of a single-article page
-- [ ] Make the site responsive
+- [ ] Make the single-article page responsive
 - [ ] ...many more steps
