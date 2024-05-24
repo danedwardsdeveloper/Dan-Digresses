@@ -2,19 +2,31 @@
   font-size: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-sizing: border-box;
+  --background-main: rgb(248, 248, 248);
+  --background-darker: #f2f2f2;
   --dark-1: #000;
   --dark-2: rgba(0, 0, 0, 0.65);
   --dark-3: rgba(0, 0, 0, 0.48);
 }
 
 body {
-  background-color: rgb(248, 248, 248);
+  background-color: var(--background-main);
 }
 
 p,
 a,
 span {
   font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited, a:active {
+  color: inherit;
 }
 
 body {
@@ -47,8 +59,9 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  margin-top: 66px;
+  margin: 66px auto 0 auto;
   padding: 0 42px;
+  max-width: 1080px;
 }
 
 .hero-banner {
@@ -80,7 +93,6 @@ main {
   height: 240px;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
-  margin-bottom: 30rem;
 }
 .categories .category-cards-container .category-card img {
   width: 196px;
@@ -92,4 +104,114 @@ main {
   padding: 24px;
   font-size: 2.4rem;
   font-weight: 500;
+}
+
+#article-previews-section {
+  margin-top: 56px;
+}
+#article-previews-section .article-preview-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#article-previews-section .article-preview-header h2 {
+  font-size: 3.2rem;
+  margin-top: 0;
+}
+#article-previews-section .article-preview-header button {
+  width: 200px;
+  height: 40px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#article-previews-section .article-preview-header button span {
+  font-size: 1.6rem;
+}
+#article-previews-section .article-preview-header button img {
+  transform: rotate(90deg);
+  filter: invert(38%) sepia(0%) saturate(1064%) hue-rotate(251deg) brightness(101%) contrast(77%);
+}
+#article-previews-section .article-previews-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+#article-previews-section .article-previews-container .article-preview-card {
+  box-sizing: border-box;
+  width: 344px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+#article-previews-section .article-previews-container .article-preview-card img {
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+#article-previews-section .article-previews-container .article-preview-title {
+  margin-top: 14px;
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#article-previews-section .article-previews-container .article-preview-content {
+  margin-top: 8px;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-3);
+  line-height: 20px;
+}
+#article-previews-section .article-previews-container .article-preview-card-footer {
+  margin-top: 24px;
+  padding: 0 8px 6px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+#article-previews-section .article-previews-container .article-preview-card-footer .article-preview-tag {
+  padding: 2px 6px;
+  background-color: var(--background-darker);
+  border-radius: 4px;
+  align-items: center;
+}
+#article-previews-section .article-previews-container .article-preview-card-footer .article-preview-tag span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+#article-previews-section .article-previews-container .article-preview-card-footer .article-preview-date {
+  color: var(--dark-3);
+  font-size: 1.4rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  height: 111px;
+  gap: 8px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer ul {
+  padding: 0;
+}
+footer ul li {
+  display: inline-block;
+  list-style-type: none;
+  font-weight: 500;
+}
+footer ul li:not(:first-child) {
+  margin-left: 0.4rem;
 }/*# sourceMappingURL=main.v1.css.map */
