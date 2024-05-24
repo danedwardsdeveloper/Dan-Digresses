@@ -34,6 +34,10 @@ a {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -73,13 +77,16 @@ main {
 
 .hero-banner {
   margin-bottom: 10rem;
+  max-width: 636px;
   h1 {
     font-size: 5.8rem;
     margin: 0 0 2rem 0;
   }
-  span {
+  p {
     font-size: 1.8rem;
+    margin: 0;
     color: var(--dark-2);
+    text-align: justify;
   }
 }
 
@@ -126,7 +133,7 @@ main {
       font-size: 3.2rem;
       margin-top: 0;
     }
-    button {
+    #sort-article-previews-btn {
       width: 200px;
       height: 40px;
       padding: 0 12px;
@@ -136,12 +143,42 @@ main {
       border-radius: 8px;
       border: none;
       background-color: rgba(0, 0, 0, 0.05);
+      cursor: pointer;
       span {
         font-size: 1.6rem;
       }
       img {
         transform: rotate(90deg);
         @include convert-svg-to-grey;
+      }
+    }
+    #sort-article-previews-modal {
+      // display: none;
+      transition: opacity 0.3s ease-in-out;
+      position: absolute;
+      right: 42px;
+      top: 800px;
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 240px;
+      z-index: 10;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 12px;
+      ul {
+        list-style-type: none;
+        padding: 4px;
+        margin: 0;
+        li {
+          padding: 14px;
+          font-size: 1.4rem;
+          border-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--background-main);
+          }
+        }
       }
     }
   }
@@ -153,7 +190,7 @@ main {
       box-sizing: border-box;
       width: 344px;
       // height: 357px;
-      // cursor: pointer;
+      cursor: pointer;
       padding: 12px;
       border-radius: 8px;
       background-color: white;

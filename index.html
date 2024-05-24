@@ -18,8 +18,8 @@
 
       <main>
         <section class="hero-banner">
-          <h1>Page title</h1>
-          <span>Page subtitle. Explaining the page in greater detail.</span>
+          <h1>Dan Digresses</h1>
+          <p>Hey, welcome to my blog! I'm Dan - a practical/ creative/ intellectual/ philosophical type of guy. This is my unfocused &amp; random blog where I write about stuff that I want to write about. You can read it if you like.</p>
         </section>
 
         <section class="categories">
@@ -51,10 +51,21 @@
         <section class="article-previews-section">
           <div class="article-preview-header">
             <h2>Recommended</h2>
-            <button>
-              <span>Most viewed</span>
+            <button id="sort-article-previews-btn">
+              <span>Most recent</span>
               <img src="./assets/images-icons/icons/google-chevron-right-icon.svg" alt="" />
             </button>
+            <div id="sort-article-previews-modal" class="hidden">
+              <ul>
+                <li>
+                  <span> Most recent </span>
+                  <img src="./assets/images-icons/icons/google-done-icon.svg" alt="" />
+                </li>
+                <li>
+                  <span> Most viewed </span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="article-previews-container">
             <div class="article-preview-card">
@@ -203,6 +214,6 @@
         </ul>
       </footer>
     </div>
-    <!-- <script type="module" src="./assets/js/main.v1.js"></script> -->
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
