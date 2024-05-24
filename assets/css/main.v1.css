@@ -106,19 +106,19 @@ main {
   font-weight: 500;
 }
 
-#article-previews-section {
+.article-previews-section {
   margin-top: 56px;
 }
-#article-previews-section .article-preview-header {
+.article-previews-section .article-preview-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#article-previews-section .article-preview-header h2 {
+.article-previews-section .article-preview-header h2 {
   font-size: 3.2rem;
   margin-top: 0;
 }
-#article-previews-section .article-preview-header button {
+.article-previews-section .article-preview-header button {
   width: 200px;
   height: 40px;
   padding: 0 12px;
@@ -129,19 +129,19 @@ main {
   border: none;
   background-color: rgba(0, 0, 0, 0.05);
 }
-#article-previews-section .article-preview-header button span {
+.article-previews-section .article-preview-header button span {
   font-size: 1.6rem;
 }
-#article-previews-section .article-preview-header button img {
+.article-previews-section .article-preview-header button img {
   transform: rotate(90deg);
   filter: invert(38%) sepia(0%) saturate(1064%) hue-rotate(251deg) brightness(101%) contrast(77%);
 }
-#article-previews-section .article-previews-container {
+.article-previews-section .article-previews-container {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
 }
-#article-previews-section .article-previews-container .article-preview-card {
+.article-previews-section .article-previews-container .article-preview-card {
   box-sizing: border-box;
   width: 344px;
   padding: 12px;
@@ -150,19 +150,19 @@ main {
   display: flex;
   flex-direction: column;
 }
-#article-previews-section .article-previews-container .article-preview-card img {
+.article-previews-section .article-previews-container .article-preview-card img {
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
 }
-#article-previews-section .article-previews-container .article-preview-title {
+.article-previews-section .article-previews-container .article-preview-title {
   margin-top: 14px;
   padding: 0 8px;
   font-size: 18px;
   font-weight: 700;
 }
-#article-previews-section .article-previews-container .article-preview-content {
+.article-previews-section .article-previews-container .article-preview-content {
   margin-top: 8px;
   padding: 0 8px;
   font-size: 16px;
@@ -170,23 +170,23 @@ main {
   color: var(--dark-3);
   line-height: 20px;
 }
-#article-previews-section .article-previews-container .article-preview-card-footer {
+.article-previews-section .article-previews-container .article-preview-card-footer {
   margin-top: 24px;
   padding: 0 8px 6px 8px;
   display: flex;
   justify-content: space-between;
 }
-#article-previews-section .article-previews-container .article-preview-card-footer .article-preview-tag {
+.article-previews-section .article-previews-container .article-preview-card-footer .article-preview-tag {
   padding: 2px 6px;
   background-color: var(--background-darker);
   border-radius: 4px;
   align-items: center;
 }
-#article-previews-section .article-previews-container .article-preview-card-footer .article-preview-tag span {
+.article-previews-section .article-previews-container .article-preview-card-footer .article-preview-tag span {
   font-size: 1.4rem;
   font-weight: 500;
 }
-#article-previews-section .article-previews-container .article-preview-card-footer .article-preview-date {
+.article-previews-section .article-previews-container .article-preview-card-footer .article-preview-date {
   color: var(--dark-3);
   font-size: 1.4rem;
 }
