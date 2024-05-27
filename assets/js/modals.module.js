@@ -1,31 +1,25 @@
-function handleModals(openButtonSelector, modalSelector) {
-  const openModalButton = document.querySelector(openButtonSelector);
-  const modal = document.querySelector(modalSelector);
-
+function handleModals() {
+  const openModalButton = document.querySelector("#sort-article-previews-btn");
+  const modal = document.querySelector("#sort-article-previews-modal");
   let isOpen = false;
 
   openModalButton.addEventListener("click", () => {
     isOpen = !isOpen;
-
     if (isOpen) {
       const buttonRect = openModalButton.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      const top = buttonRect.bottom + 15;
-      let left = buttonRect.left;
-
-      if (left + modal.offsetWidth > window.innerWidth) {
-        left = window.innerWidth - modal.offsetWidth;
-      }
-
+      const modalRect = modal.getBoundingClientRect();
+      console.log(modalRect);
+      const top = buttonRect.top;
       modal.style.top = `${top}px`;
-      modal.style.left = `${left}px`;
+
+      let right = buttonRect.right;
+      modal.style.left = `${right}px`;
+
       modal.classList.remove("hidden");
     } else {
       modal.classList.add("hidden");
     }
   });
-
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.classList.add("hidden");
@@ -33,4 +27,4 @@ function handleModals(openButtonSelector, modalSelector) {
   });
 }
 
-export default handleModals;
+handleModals();

@@ -133,9 +133,12 @@ main {
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
-  border: none;
+  border: 2px solid transparent;
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
+}
+.article-previews-section .article-preview-header #sort-article-previews-btn:focus {
+  border: 2px solid black;
 }
 .article-previews-section .article-preview-header #sort-article-previews-btn span {
   font-size: 1.6rem;
