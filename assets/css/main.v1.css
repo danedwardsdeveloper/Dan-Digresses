@@ -43,6 +43,11 @@ body {
   justify-content: space-between;
   padding: 14px 24px;
 }
+@media screen and (max-width: 840px) {
+  .header {
+    padding: 16px;
+  }
+}
 .header .brand-logo-container {
   font-weight: 600;
 }
@@ -66,6 +71,11 @@ main {
   margin: 66px auto 0 auto;
   padding: 0 42px;
   max-width: 1080px;
+}
+@media screen and (max-width: 840px) {
+  main {
+    padding: 0 16px;
+  }
 }
 
 .hero-banner {
@@ -119,31 +129,40 @@ main {
 .article-previews-section .article-preview-header {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .article-previews-section .article-preview-header h2 {
   font-size: 3.2rem;
-  margin-top: 0;
+  margin: 0 0 1rem 0;
 }
-.article-previews-section .article-preview-header #sort-article-previews-btn {
+.article-previews-section .article-preview-header button#sort-article-previews-btn {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: var(--background-main);
+}
+.article-previews-section .article-preview-header button#sort-article-previews-btn div {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border: 2px solid transparent;
   width: 200px;
   height: 40px;
   padding: 0 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
-.article-previews-section .article-preview-header #sort-article-previews-btn:focus {
+.article-previews-section .article-preview-header button#sort-article-previews-btn div:focus {
   border: 2px solid black;
 }
-.article-previews-section .article-preview-header #sort-article-previews-btn span {
+.article-previews-section .article-preview-header button#sort-article-previews-btn div span {
   font-size: 1.6rem;
 }
-.article-previews-section .article-preview-header #sort-article-previews-btn img {
+.article-previews-section .article-preview-header button#sort-article-previews-btn div img {
   transform: rotate(90deg);
   filter: invert(38%) sepia(0%) saturate(1064%) hue-rotate(251deg) brightness(101%) contrast(77%);
 }
@@ -177,8 +196,12 @@ main {
 }
 .article-previews-section .article-previews-container {
   display: flex;
+  margin-top: 24px;
   gap: 24px;
   flex-wrap: wrap;
+}
+.article-previews-section .article-previews-container > * {
+  flex: 1;
 }
 .article-previews-section .article-previews-container .article-preview-card {
   box-sizing: border-box;

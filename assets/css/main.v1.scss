@@ -1,6 +1,8 @@
 @mixin convert-svg-to-grey {
   filter: invert(38%) sepia(0%) saturate(1064%) hue-rotate(251deg) brightness(101%) contrast(77%);
 }
+$phone: 600px;
+$tablet: 840px;
 
 :root {
   font-size: 10px;
@@ -47,9 +49,10 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 14px 24px;
-  //   background-color: lightgoldenrodyellow;
+  @media screen and (max-width: $tablet) {
+    padding: 16px;
+  }
   .brand-logo-container {
-    // background-color: lightblue;
     font-weight: 600;
   }
   .brand-logo {
@@ -73,6 +76,9 @@ main {
   margin: 66px auto 0 auto;
   padding: 0 42px;
   max-width: 1080px;
+  @media screen and (max-width: $tablet) {
+    padding: 0 16px;
+  }
 }
 
 .hero-banner {
@@ -128,31 +134,40 @@ main {
   .article-preview-header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     h2 {
       font-size: 3.2rem;
-      margin-top: 0;
+      margin: 0 0 1rem 0;
     }
-    #sort-article-previews-btn {
-      width: 200px;
-      height: 40px;
-      padding: 0 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 8px;
-      border: 2px solid transparent;
-      background-color: rgba(0, 0, 0, 0.05);
-      cursor: pointer;
-      &:focus {
-        border: 2px solid black;
-      }
-      span {
-        font-size: 1.6rem;
-      }
-      img {
-        transform: rotate(90deg);
-        @include convert-svg-to-grey;
+    button#sort-article-previews-btn {
+      display: block;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: var(--background-main);
+      div {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        border: 2px solid transparent;
+        width: 200px;
+        height: 40px;
+        padding: 0 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        &:focus {
+          border: 2px solid black;
+        }
+        span {
+          font-size: 1.6rem;
+        }
+        img {
+          transform: rotate(90deg);
+          @include convert-svg-to-grey;
+        }
       }
     }
     #sort-article-previews-modal {
@@ -187,8 +202,12 @@ main {
   }
   .article-previews-container {
     display: flex;
+    margin-top: 24px;
     gap: 24px;
     flex-wrap: wrap;
+    > * {
+      flex: 1;
+    }
     .article-preview-card {
       box-sizing: border-box;
       width: 344px;

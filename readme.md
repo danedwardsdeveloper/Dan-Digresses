@@ -10,13 +10,18 @@
 
 ## To-Do List
 
-- [x] Clone a hard-coded static version of the homepage
-- [ ]
+- [ ] Clone a hard-coded static version of a single-article page
+- [ ] Make the single-article page responsive
 - [ ] Improve modal
   - [ ] Modal positioning
   - [ ] Click behavior
   - [ ] Animation
-- [ ] Make the homepage responsive
-- [ ] Clone a hard-coded static version of a single-article page
-- [ ] Make the single-article page responsive
+- [ ] Hardcode a category/search term page
+- [ ] Make the category/search term page page responsive
+- [ ] Implement pagination or endless scrolling
 - [ ] ...many more steps
+
+## Completed tasks
+
+- [x] Clone a hard-coded static version of the homepage
+- [x] Make the homepage responsive
