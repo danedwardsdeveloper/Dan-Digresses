@@ -53,6 +53,7 @@ body {
 }
 .header .brand-logo {
   font-size: 3rem;
+  cursor: pointer;
 }
 .header .search-container {
   display: flex;
@@ -85,6 +86,7 @@ main {
 .hero-banner h1 {
   font-size: 5.8rem;
   margin: 0 0 2rem 0;
+  cursor: pointer;
 }
 .hero-banner p {
   font-size: 1.8rem;
@@ -252,6 +254,16 @@ main {
 .article-previews-section .article-previews-container .article-preview-card-footer .article-preview-date {
   color: var(--dark-3);
   font-size: 1.4rem;
+}
+
+.column-layout {
+  display: flex;
+}
+.column-layout aside {
+  width: 20%;
+}
+.column-layout .full-article {
+  width: 50%;
 }
 
 footer {

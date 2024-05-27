@@ -28,3 +28,25 @@ function handleModals() {
 }
 
 handleModals();
+
+function addArticlePreviewEventListeners() {
+  const previewCards = document.querySelectorAll(".article-preview-card");
+  previewCards.forEach(function (previewCard) {
+    previewCard.addEventListener("click", () => {
+      window.location.href = "article.html";
+    });
+  });
+}
+
+addArticlePreviewEventListeners();
+
+function handleHomeClicks() {
+  const logo = document.querySelector(".brand-logo");
+  logo.addEventListener("click", () => {
+    window.location.href = "/";
+  });
+
+  const h1 = document.querySelector(".hero-banner h1");
+}
+
+handleHomeClicks();
