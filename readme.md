@@ -12,8 +12,10 @@
 
 - [x] Clone a hard-coded static version of the homepage
 - [ ]
-- [ ] Style 'Most viewed' select modal
-- [ ] Style search modal
+- [ ] Improve modal
+  - [ ] Modal positioning
+  - [ ] Click behavior
+  - [ ] Animation
 - [ ] Make the homepage responsive
 - [ ] Clone a hard-coded static version of a single-article page
 - [ ] Make the single-article page responsive
